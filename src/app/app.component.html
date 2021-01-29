@@ -1,305 +1,601 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>VXUS - Vanguard Total International Stock ETF | Vanguard Advisors</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<style>
-h1{
-  font-family: Arial, sans-serif;
-}
-p{
-  font-family: Arial, sans-serif;
-}
-  .financial-advisors{
-    margin-right: 75%;
-}
+  <head>
+    <title>
+      VXUS - Vanguard Total International Stock ETF | Vanguard Advisors
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    h1 {
+      font-family: Arial, sans-serif;
+    }
+    p {
+      font-family: Arial, sans-serif;
+    }
+    .financial-advisors {
+      margin-right: 75%;
+    }
 
-  .global-toolbar-container{
-    border-bottom: 2px solid rgb(221, 217, 217);
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    color: rgb(19, 15, 15);
-  }
+    .global-toolbar-container {
+      border-bottom: 2px solid rgb(221, 217, 217);
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      color: rgb(19, 15, 15);
+    }
 
-  .arrow {
-  border: solid darkred;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-.flex-grid-nav{
-  
-  display: flex;
-  justify-content: space-around;
-  align-items: center
-}
+    .arrow {
+      border: solid darkred;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+    .flex-grid-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
 
-.small-nav{
-  border-bottom: 2px solid rgb(221, 217, 217);
-}
+    .small-nav {
+      border-bottom: 2px solid rgb(221, 217, 217);
+    }
 
-  .down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
 
-.below-nav-layout {
-  margin-top: 1%;
-  display: flex;  
-  flex-wrap: wrap;
-  margin-left: 1%;
-  justify-content: space-between;
-  padding: 5px;  
-  font-family: "Times New Roman", Times, serif;
-}
-.below-nav-child {
-  flex-grow: 1;
-  
-  
-}
-.below-nav-child-small {
-  width: 21%;
-  margin-top: 5%;
-  font-family: "Times New Roman", Times, serif;
-}
+    .below-nav-layout {
+      margin-top: 1%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 1%;
+      justify-content: space-between;
+      padding: 5px;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .below-nav-child {
+      flex-grow: 1;
+    }
+    .below-nav-child-small {
+      width: 21%;
+      margin-top: 5%;
+      font-family: "Times New Roman", Times, serif;
+    }
 
-.main-buttons{
-  background-color: #922525;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 10px;
-  margin-top: 30px;;
-  border-radius: 25px;
-}
+    .main-buttons {
+      background-color: #922525;
+      border: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 10px;
+      margin-top: 30px;
+      border-radius: 25px;
+    }
 
+    .unordered {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
 
-.unordered {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+    .list {
+      float: left;
+    }
 
-.list {
-  float: left;
-}
+    .list a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 30px 16px;
+      text-decoration: none;
+    }
 
-.list a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 30px 16px;
-  text-decoration: none;
-}
+    li a:hover {
+      background-color: #111;
+    }
 
-li a:hover {
-  background-color: #111;
-}
+    .overview-flex {
+      display: flex;
+    }
+    .narrow {
+      width: 21%;
+      /* Just so it's visible */
+    }
+    .wide {
+      flex: 1;
+      height: 600px;
+      /* Grow to rest of container */
+      /* Just so it's visible */
+    }
+    li {
+      margin-top: 20px;
+    }
+    ul {
+      font-size: 18px;
+      margin-left: 30px;
+    }
+    .checked {
+      color: orange;
+    }
 
-.overview-flex {
-  display: flex;
-}
-.narrow {
-  width: 21%;
-  /* Just so it's visible */
-}
-.wide {
-  flex: 1;
-  height: 800px;
-  /* Grow to rest of container */
-  /* Just so it's visible */
-}
-li{
-  margin-top: 20px;
-}
-ul{
-  font-size: 18px;
-  margin-left: 30px;
-}
-</style>
+    .fa-star {
+      margin-left: 10px;
+    }
 
-<body>
-  <header class="global-header">
-    <div class="global-toolbar-container">
-      <p class = "financial-advisors" style="font-size: 15px; margin-left: 2%;"> Financial Advisors <i class="arrow down"></i></p>
-      <p style="font-size: 13px;"> Contact us</p>
-      <p style="margin-left: 2%; font-size: 13px;"> Sign in</p>
-    </div>
-    <div class="small-nav">
-      <div class="flex-grid-nav">
-        <img src="/assets/img/Vanguard.png" alt="Vanguard Logo" width="140" height="70" style = "border-right: 2px solid rgb(221, 217, 217);">
-        <p class = "top-nav"  >Investments <i class="arrow down"></i></p>
-        <p class = "top-nav">Advisor's Alpha <i class="arrow down"></i></p>
-        <p class = "top-nav">Insights <i class="arrow down"></i></p>
-        <p class = "top-nav">Why Vanguard</p>
-        <p class = "top-nav" style = "margin-right: 5%;" >Tax Center</p>
-        <img src="/assets/img/search-512.webp" alt="magnifying glass" width="20" height="20">
+    .black-box-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 100px;
+    }
+    .black-box {
+      background: rgb(66, 65, 65);
+      padding: 150px;
+
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+
+  <body>
+    <header class="global-header">
+      <div class="global-toolbar-container">
+        <p class="financial-advisors" style="font-size: 15px; margin-left: 2%">
+          Financial Advisors <i class="arrow down"></i>
+        </p>
+        <p style="font-size: 13px">Contact us</p>
+        <p style="margin-left: 2%; font-size: 13px">Sign in</p>
+      </div>
+      <div class="small-nav">
+        <div class="flex-grid-nav">
+          <img
+            src="/assets/img/Vanguard.png"
+            alt="Vanguard Logo"
+            width="140"
+            height="70"
+            style="border-right: 2px solid rgb(221, 217, 217)"
+          />
+          <p class="top-nav">Investments <i class="arrow down"></i></p>
+          <p class="top-nav">Advisor's Alpha <i class="arrow down"></i></p>
+          <p class="top-nav">Insights <i class="arrow down"></i></p>
+          <p class="top-nav">Why Vanguard</p>
+          <p class="top-nav" style="margin-right: 5%">Tax Center</p>
+          <img
+            src="/assets/img/search-512.webp"
+            alt="magnifying glass"
+            width="20"
+            height="20"
+          />
+        </div>
+      </div>
+    </header>
+    <div class="below-nav-layout">
+      <div class="below-nav-child">
+        <div>
+          <h1 style="font-size: 55px; color: darkred">VXUS</h1>
+          <h1 style="font-size: 70px; margin-top: -52px">
+            Total International
+          </h1>
+          <h1 style="font-size: 70px; margin-top: -60px">Stock ETF</h1>
+          <p style="margin-top: -43px">Also available as a mutual fund</p>
+        </div>
+        <button class="main-buttons">
+          Summary Perspectives
+          <i class="fa fa-download" style="margin-left: 10px"> </i>
+        </button>
+        <button class="main-buttons">
+          Fact Sheets <i class="fa fa-download" style="margin-left: 10px"></i>
+        </button>
+        <br />
+        <button class="main-buttons" style="background-color: black">
+          Compare Product
+          <i class="fa fa-download" style="margin-left: 10px"></i>
+        </button>
+      </div>
+      <div style="margin-left: -30px" class="below-nav-child-small">
+        <div style="margin-top: 30px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">MARKET PRICE</p>
+          <h1 style="margin-top: -20px">63.19</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">NAV</p>
+          <h1 style="margin-top: -20px">62.11</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">EXPENSE RATIO</p>
+          <h1 style="margin-top: -20px">0.08%</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+      </div>
+      <div class="below-nav-child-small" style="margin-right: 40px">
+        <div style="margin-top: 30px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">
+            MARKET PRICE CHANGE
+          </p>
+          <h1 style="margin-top: -20px">-$0.08 (-0.13%)</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">NAV CHANGE</p>
+          <h1 style="margin-top: -20px">-$0.21 (-0.33%)</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">
+            MANAGEMENT STYLE
+          </p>
+          <h1 style="margin-top: -20px">INDEX</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
       </div>
     </div>
-  </header>
-<div class="below-nav-layout">
-  <div class="below-nav-child">
-    <div>
-      <h1 style= "font-size: 55px; color: darkred; ">VXUS </h1>
-      <h1 style = "font-size: 70px; margin-top:-52px;">Total International</h1>
-      <h1 style = "font-size: 70px; margin-top:-60px;">Stock ETF</h1>
-      <p style= "margin-top: -43px;"> Also available as a mutual fund</p>
-    </div>
-    <button class = "main-buttons">Summary Perspectives <i class="fa fa-download" style = "margin-left: 10px;"> </i></button>
-    <button class = "main-buttons"> Fact Sheets <i  class="fa fa-download" style = "margin-left: 10px;"></i></button> <br>
-    <button class = "main-buttons" style="background-color: black;"> Compare Product <i  class="fa fa-download" style = "margin-left: 10px;"></i></button>
-  </div>
-  <div style = "margin-left: -30px;"class="below-nav-child-small">
-    <div style = "margin-top: 30px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">MARKET PRICE</p>
-      <h1 style= "margin-top: -20px;">63.19</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">NAV</p>
-      <h1 style= "margin-top: -20px;">62.11</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">EXPENSE RATIO</p>
-      <h1 style= "margin-top: -20px;">0.08%</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-  </div>
-  <div class="below-nav-child-small" style= "margin-right: 40px;">
-    <div style = "margin-top: 30px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">MARKET PRICE CHANGE</p>
-      <h1 style= "margin-top: -20px;">-$0.08 (-0.13%)</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">NAV CHANGE</p>
-      <h1 style= "margin-top: -20px;">-$0.21 (-0.33%)</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">MANAGEMENT STYLE</p>
-      <h1 style= "margin-top: -20px;">INDEX</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-  </div>
-</div>
 
-<ul class = "unordered"style = "margin-top: 5%; ">
-  <li class = "list" style = "margin-left: 2%;"><a class="active" href="#home">Overview</a></li>
-  <li class = "list" style = "margin-left: 3%;"><a href="#news">Performance</a></li>
-  <li class = "list"  style = "margin-left: 3%;"><a href="#contact">Price & Distributions</a></li>
-  <li class = "list"  style = "margin-left: 3%;"><a href="#about">Portfolios</a></li>
-  <li class = "list"  style = "margin-left: 3%;"><a href="#news">Risk</a></li>
-  <li class = "list"  style = "margin-left: 3%;"><a href="#contact">Fund Management</a></li>
-  <li class = "list"  style = "margin-left: 3%;"><a href="#about">Fund Literature</a></li>
-</ul>
+    <ul class="unordered" style="margin-top: 5%">
+      <li class="list" style="margin-left: 2%">
+        <a class="active" href="#home">Overview</a>
+      </li>
+      <li class="list" style="margin-left: 3%">
+        <a href="#news">Performance</a>
+      </li>
+      <li class="list" style="margin-left: 3%">
+        <a href="#contact">Price & Distributions</a>
+      </li>
+      <li class="list" style="margin-left: 3%">
+        <a href="#about">Portfolios</a>
+      </li>
+      <li class="list" style="margin-left: 3%"><a href="#news">Risk</a></li>
+      <li class="list" style="margin-left: 3%">
+        <a href="#contact">Fund Management</a>
+      </li>
+      <li class="list" style="margin-left: 3%">
+        <a href="#about">Fund Literature</a>
+      </li>
+    </ul>
 
-<div style= "height: 10%; margin: 3%;  border-bottom: 2px solid rgb(221, 217, 217);">
-  <h1 style = "font-size: 40px;">Overview</h1>
-  <p style = "font-size: 25px; margin-top: -20px;">Objective: Total International Stock Index Fund seeks to track the performance of a benchmark index<br>
-     that measures the investment return of stocks issued by companies located in developed and <br>
-     emerging markets, excluding the United States.</p>
-</div>
-<h1 style = "margin-left: 2%;">Fund Facts</h1>
-<div class="overview-flex">
-  <div class="narrow" style = "margin-left: 2%;">
-    <div style = "margin-top: 30px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">YTD RETURNS (MP)</p>
-      <h1 style= "margin-top: -20px;">4.41%</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
+    <div
+      style="
+        height: 10%;
+        margin: 3%;
+        border-bottom: 2px solid rgb(221, 217, 217);
+      "
+    >
+      <h1 style="font-size: 40px">Overview</h1>
+      <p style="font-size: 25px; margin-top: -20px">
+        Objective: Total International Stock Index Fund seeks to track the
+        performance of a benchmark index<br />
+        that measures the investment return of stocks issued by companies
+        located in developed and <br />
+        emerging markets, excluding the United States.
+      </p>
     </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">HOLDINGS</p>
-      <h1 style= "margin-top: -20px;">7,386</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
+    <h1 style="margin-left: 2%">Fund Facts</h1>
+    <div
+      class="overview-flex"
+      style="border-bottom: 2px solid rgb(221, 217, 217)"
+    >
+      <div class="narrow" style="margin-left: 2%">
+        <div style="margin-top: 30px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">
+            YTD RETURNS (MP)
+          </p>
+          <h1 style="margin-top: -20px">4.41%</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">HOLDINGS</p>
+          <h1 style="margin-top: -20px">7,386</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">
+            NET ASSETS FOR VXUS
+          </p>
+          <h1 style="margin-top: -20px">$38.5 B</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">
+            LIPPER PEER AVERAGE
+          </p>
+          <h1 style="margin-top: -20px">1.263%</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p
+            style="margin-bottom: 2px; font-size: 15px; color: rgb(58, 56, 56)"
+          >
+            MORNING STAR RATING
+          </p>
+          <span style="margin-left: 0px" class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <p
+            style="
+              margin-top: 3px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+      </div>
+      <div class="narrow" style="margin-left: -3%">
+        <div style="margin-top: 30px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">
+            YTD RETURNS (NAV)
+          </p>
+          <h1 style="margin-top: -20px">3.73%</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">INCEPTION DATE</p>
+          <h1 style="margin-top: -20px">01/26/2011</h1>
+          <p style="color: white; margin-top: -20px">f</p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">TURNOVER RATE</p>
+          <h1 style="margin-top: -20px">7.20%</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">DESIGNATION</p>
+          <h1 style="margin-top: -10px; font-size: 20px">
+            International Large <br />
+            Blend
+          </h1>
+        </div>
+      </div>
+      <div
+        class="narrow"
+        style="margin-left: -2%; border-right: 2px solid rgb(221, 217, 217)"
+      >
+        <div style="margin-top: 30px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">DIVIDEND YIELD</p>
+          <h1 style="margin-top: -20px">63.19</h1>
+          <p style="color: white; margin-top: -20px">f</p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">
+            TOTAL NET ASSETS
+          </p>
+          <h1 style="margin-top: -20px">$416.9 B</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">CUSIP</p>
+          <h1 style="margin-top: -20px">921909768</h1>
+          <p style="color: white; margin-top: -20px">f</p>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">BENCHMARK</p>
+          <h1 style="margin-top: -20px">0.08%</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+      </div>
+
+      <div class="wide">
+        <div
+          class="overview-list"
+          style="border-bottom: 2px solid rgb(221, 217, 217)"
+        >
+          <h1 style="margin-left: 50px">Investment Approach</h1>
+          <ul>
+            <li>
+              Seeks to track the performance of the FTSE Global All Cap <br />
+              ex US Index.
+            </li>
+            <li>
+              Broad exposure across developed and emerging non-U.S. <br />equity
+              markets.
+            </li>
+            <li>Passively managed.</li>
+            <li>Fund remains fully invested.</li>
+            <li>Low expenses minimize net tracking error.</li>
+          </ul>
+        </div>
+        <div style="margin-left: 50px">
+          <h1>Fund Management</h1>
+          <p>Vanguard Equity Index Group</p>
+        </div>
+      </div>
     </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">NET ASSETS FOR VXUS</p>
-      <h1 style= "margin-top: -20px;">$38.5 B</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
+    <div class="overview-flex" style="margin-top: 2%">
+      <div class="narrow" style="margin-left: 2%">
+        <h1>Trading</h1>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">IOV</p>
+          <h1 style="margin-top: -10px; font-size: 32px">VXUS.IV</h1>
+        </div>
+        <div style="margin-top: 45px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">ETF EXCHANGE</p>
+          <h1 style="margin-top: -10px; font-size: 21px">
+            National Association of <br />
+            Securities Dealers Automated <br />
+            Quotations
+          </h1>
+        </div>
+      </div>
+      <div class="narrow">
+        <div style="margin-top: 30px">
+          <p style="font-size: 15px; color: rgb(58, 56, 56)">
+            OUTSTANDING SHARES
+          </p>
+          <h1 style="margin-top: -20px">638,018,779.1</h1>
+          <p
+            style="
+              margin-top: -20px;
+              color: rgb(85, 82, 82);
+              font-size: 15px;
+              font-style: italic;
+            "
+          >
+            As of 1/26/21
+          </p>
+        </div>
+      </div>
     </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">LIPPER PEER AVERAGE</p>
-      <h1 style= "margin-top: -20px;">1.263%</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
+    <div
+      class="black-box-flex"
+      style="margin-top: 8%; margin-left: 2%; margin-right: 2%"
+    >
+      <div class="black-box">
+        <h1 style="color: white">Portfolio Analytics</h1>
+        <!-- <p style = "color: white;"> 
+          Create hypothetical client portfolios and evaluate their <br>
+          potential response to current market conditions. Analyze <br>
+          hypothetical performance and risk statistics, compare two <br>
+          portfolios side-by-side, and more.
+        </p> -->
+      </div>
+      <div class="black-box">
+        <h1 style="color: white">Strategic Models</h1>
+      </div>
     </div>
-  </div>
-  <div class="narrow" style = "margin-left: -3%;">
-    <div style = "margin-top: 30px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">YTD RETURNS (NAV)</p>
-      <h1 style= "margin-top: -20px;">3.73%</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">INCEPTION DATE</p>
-      <h1 style= "margin-top: -20px;">01/26/2011</h1>
-      <p style="color: white; margin-top: -20px;" > f</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">TURNOVER RATE</p>
-      <h1 style= "margin-top: -20px;">7.20%</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">DESIGNATION</p>
-      <h1 style= "margin-top: -10px; font-size: 20px;">International Large <br> Blend</h1>
-    </div>
-  </div>
-  <div class="narrow" style = "margin-left: -2%; border-right: 2px solid rgb(221, 217, 217);">
-    <div style = "margin-top: 30px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">DIVIDEND YIELD</p>
-      <h1 style= "margin-top: -20px;">63.19</h1>
-      <p style="color: white; margin-top: -20px;" > f</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">TOTAL NET ASSETS</p>
-      <h1 style= "margin-top: -20px;">$416.9 B</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">CUSIP</p>
-      <h1 style= "margin-top: -20px;">921909768</h1>
-      <p style="color: white; margin-top: -20px;" > f</p>    </div>
-    <div style = "margin-top: 45px;">
-      <p style= "font-size: 15px; color:rgb(58, 56, 56);">BENCHMARK</p>
-      <h1 style= "margin-top: -20px;">0.08%</h1>
-      <p style= "margin-top: -20px; color:rgb(85, 82, 82); font-size: 15px; font-style: italic;" >As of 1/26/21</p>
-    </div>
-  </div>
-  
-  <div class="wide" >
-    <div class = "overview-list" style= "border-bottom: 2px solid rgb(221, 217, 217);">
-      <h1 style= "margin-left: 50px;">Investment Approach</h1>
-      <ul>
-        <li>Seeks to track the performance of the FTSE Global All Cap
-          <br> ex US Index.</li>
-        <li>Broad exposure across developed and emerging non-U.S. 
-          <br>equity markets.</li>
-        <li>Passively managed.</li>
-        <li>Fund remains fully invested.</li>
-        <li>Low expenses minimize net tracking error.
-        </li>
-      </ul>
-    </div>
-    <div style= "margin-left: 50px;">
-      <h1>Fund Management</h1>
-      <p>Vanguard Equity Index Group</p>
-    </div>
-  </div>
-</div>
-  <!--<footer>
+    <!--<footer>
     Hello this is the footer
   </footer> -->
-</body>
-
+  </body>
 </html>
